@@ -1,0 +1,41 @@
+{
+  "Get-AzSpoolKey+[NoContext]+List+$POST+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o/listKeys?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o/listKeys?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "8" ],
+        "x-ms-client-request-id": [ "d68c2a93-a872-4d84-9e00-07d1dc8e1188" ],
+        "CommandName": [ "Get-AzSpoolKey" ],
+        "FullCommandName": [ "Get-AzSpoolKey_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1199" ],
+        "x-ms-request-id": [ "1a647ed4-259b-4ce2-b0ff-69faec4c444e" ],
+        "x-ms-correlation-request-id": [ "90dc73de-dfd5-4fab-9544-053b22cecb69" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T185958Z:90dc73de-dfd5-4fab-9544-053b22cecb69" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 18:59:57 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "935" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"primaryKey\":\"hgRLW36xd4UdPjwKATtkiEnv7KL2fntLtO49urk/AVVPv0PHz2MlCgqjNGkcCvgjpUUnN4Xx5gOl7ymRFjL32g==\",\"secondaryKey\":\"GVMsnslqAc/X+CN2rY7OENXRynJHfjwlwklKRWFV/D7MCkEHFXRB0H1z1t/U0pxoKWfHteOLdSmnDDHsoOxWeg==\",\"primaryConnectionString\":\"endpoint=https://testspoolexisting1-8lje6o.westus2.spool.azure.net/;accesskey=hgRLW36xd4UdPjwKATtkiEnv7KL2fntLtO49urk/AVVPv0PHz2MlCgqjNGkcCvgjpUUnN4Xx5gOl7ymRFjL32g==;issuer=subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"secondaryConnectionString\":\"endpoint=https://testspoolexisting1-8lje6o.westus2.spool.azure.net/;accesskey=GVMsnslqAc/X+CN2rY7OENXRynJHfjwlwklKRWFV/D7MCkEHFXRB0H1z1t/U0pxoKWfHteOLdSmnDDHsoOxWeg==;issuer=subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\"}"
+    }
+  }
+}

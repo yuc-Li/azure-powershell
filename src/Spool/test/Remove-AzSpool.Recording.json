@@ -1,0 +1,160 @@
+{
+  "Remove-AzSpool+[NoContext]+Delete+$PUT+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview",
+      "Content": "{\r\n  \"location\": \"westus2\"\r\n}",
+      "Headers": {
+        "x-ms-unique-id": [ "22" ],
+        "x-ms-client-request-id": [ "17317212-380b-4f15-a9aa-81d25a0d3812" ],
+        "CommandName": [ "New-AzSpool" ],
+        "FullCommandName": [ "New-AzSpool_CreateExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "29" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1196" ],
+        "x-ms-request-id": [ "2084b7f2-9b78-4144-9024-e3f342697fb5" ],
+        "x-ms-correlation-request-id": [ "4d668a46-2ec2-44bd-93c4-bd4f90467997" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190008Z:4d668a46-2ec2-44bd-93c4-bd4f90467997" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:08 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "402" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3\",\"name\":\"testSpoolCreated-91xmph3\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolcreated-91xmph3.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Remove-AzSpool+[NoContext]+Delete+$DELETE+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview+2": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "23" ],
+        "x-ms-client-request-id": [ "a7359957-1835-4132-850d-5c2e0ba7c7e4" ],
+        "CommandName": [ "Remove-AzSpool" ],
+        "FullCommandName": [ "Remove-AzSpool_Delete" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "00000000-0000-0000-0000-000000000000" ],
+        "x-ms-correlation-request-id": [ "6540dadb-a50d-4916-b6ac-6e6def208f47" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [ "14998" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190009Z:6540dadb-a50d-4916-b6ac-6e6def208f47" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:09 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null
+    }
+  },
+  "Remove-AzSpool+[NoContext]+DeleteViaIdentity+$PUT+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview",
+      "Content": "{\r\n  \"location\": \"westus2\"\r\n}",
+      "Headers": {
+        "x-ms-unique-id": [ "24" ],
+        "x-ms-client-request-id": [ "1a7d6f4c-b8b7-49d0-a96b-ae898ff49906" ],
+        "CommandName": [ "New-AzSpool" ],
+        "FullCommandName": [ "New-AzSpool_CreateExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "29" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1195" ],
+        "x-ms-request-id": [ "f29f2a68-d56b-41fb-a672-de5a1887d1b2" ],
+        "x-ms-correlation-request-id": [ "4a52ddd8-e36f-4e7d-b0b1-080613c49e13" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190010Z:4a52ddd8-e36f-4e7d-b0b1-080613c49e13" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:10 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "402" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3\",\"name\":\"testSpoolCreated-91xmph3\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolcreated-91xmph3.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Remove-AzSpool+[NoContext]+DeleteViaIdentity+$DELETE+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview+2": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "25" ],
+        "x-ms-client-request-id": [ "4a7171cc-63b4-48c8-abc1-b31fb88d3078" ],
+        "CommandName": [ "Remove-AzSpool" ],
+        "FullCommandName": [ "Remove-AzSpool_DeleteViaIdentity" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "00000000-0000-0000-0000-000000000000" ],
+        "x-ms-correlation-request-id": [ "2778a49b-cb16-4afd-bd81-b616799f32e5" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [ "14997" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190011Z:2778a49b-cb16-4afd-bd81-b616799f32e5" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:11 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null
+    }
+  }
+}

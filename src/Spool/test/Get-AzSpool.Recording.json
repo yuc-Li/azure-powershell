@@ -1,0 +1,158 @@
+{
+  "Get-AzSpool+[NoContext]+List+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/providers/Microsoft.SpoolService/spools?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/providers/Microsoft.SpoolService/spools?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "4" ],
+        "x-ms-client-request-id": [ "9b71e50e-7660-4dd3-915d-347b435eacc9" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11999" ],
+        "x-ms-request-id": [ "084bd3a4-50e0-4388-a76f-758b2be7323e" ],
+        "x-ms-correlation-request-id": [ "d1fb62c1-eb88-453b-8837-2bf4b5b8dd9e" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T185955Z:d1fb62c1-eb88-453b-8837-2bf4b5b8dd9e" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 18:59:54 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "4969" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/spool-ci-test/providers/Microsoft.SpoolService/spools/runner-prev\",\"name\":\"runner-prev\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"runner-prev.westus2.spool.azure.net\"}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/spool-test/providers/Microsoft.SpoolService/spools/myspool2\",\"name\":\"myspool2\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{\"rg\":\"spool-test\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"myspool2.westus2.spool.azure.net\"}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/spool-samples/providers/Microsoft.SpoolService/spools/spool-sample\",\"name\":\"spool-sample\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"spool-sample.westus2.spool.azure.net\"}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/mh-test-spool-rg/providers/Microsoft.SpoolService/spools/mh-test-spool\",\"name\":\"mh-test-spool\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"mh-test-spool.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rajat-test/providers/Microsoft.SpoolService/spools/spool-test\",\"name\":\"spool-test\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"spool-test.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/L1Group/providers/Microsoft.SpoolService/spools/L1Res\",\"name\":\"L1Res\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"l1res.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/subhasanrg/providers/Microsoft.SpoolService/spools/subhasanrp\",\"name\":\"subhasanrp\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"subhasanrp.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-prev-wus2/providers/Microsoft.SpoolService/spools/runner-prev-wus2\",\"name\":\"runner-prev-wus2\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"runner-prev-wus2.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/SpoolTest/providers/Microsoft.SpoolService/spools/TestResource\",\"name\":\"TestResource\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testresource.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/testRg/providers/Microsoft.SpoolService/spools/testResource1\",\"name\":\"testResource1\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testresource1.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/spoolresource1/providers/Microsoft.SpoolService/spools/someresource1\",\"name\":\"someresource1\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"someresource1.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/IntegrationTest/providers/Microsoft.SpoolService/spools/pwshIntegration\",\"name\":\"pwshIntegration\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"pwshintegration.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"name\":\"testSpoolExisting1-8lje6o\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting1-8lje6o.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax\",\"name\":\"testSpoolExisting2-ud47ax\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting2-ud47ax.westus2.spool.azure.net\",\"optionalFeatures\":[]}}]}"
+    }
+  },
+  "Get-AzSpool+[NoContext]+Get+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "5" ],
+        "x-ms-client-request-id": [ "3a0ea8a9-4b76-4cdc-b6bf-4c202412b146" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11998" ],
+        "x-ms-request-id": [ "025e08c6-1366-40a0-b6c7-4ac98c31e118" ],
+        "x-ms-correlation-request-id": [ "e2aa6dbc-0d91-48e6-945f-09cb3e0411f6" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T185956Z:e2aa6dbc-0d91-48e6-945f-09cb3e0411f6" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 18:59:55 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "405" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"name\":\"testSpoolExisting1-8lje6o\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting1-8lje6o.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Get-AzSpool+[NoContext]+List1+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "6" ],
+        "x-ms-client-request-id": [ "5e46b004-3a80-477d-8359-6d92261a1d06" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_List1" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11997" ],
+        "x-ms-request-id": [ "9f3dbc78-642b-438f-986f-f493afee173e" ],
+        "x-ms-correlation-request-id": [ "b93c1e74-06b7-4e47-a8e4-9ba333cf8062" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T185956Z:b93c1e74-06b7-4e47-a8e4-9ba333cf8062" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 18:59:55 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "823" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"name\":\"testSpoolExisting1-8lje6o\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting1-8lje6o.westus2.spool.azure.net\",\"optionalFeatures\":[]}},{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax\",\"name\":\"testSpoolExisting2-ud47ax\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting2-ud47ax.westus2.spool.azure.net\",\"optionalFeatures\":[]}}]}"
+    }
+  },
+  "Get-AzSpool+[NoContext]+GetViaIdentity+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "7" ],
+        "x-ms-client-request-id": [ "283792ef-9955-436a-877b-e2472b880915" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_GetViaIdentity" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11996" ],
+        "x-ms-request-id": [ "d8e2d44f-a1ee-4519-8fef-3ab79c3319a9" ],
+        "x-ms-correlation-request-id": [ "224b2392-629d-4883-afe2-d384230ef1ee" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T185956Z:224b2392-629d-4883-afe2-d384230ef1ee" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 18:59:55 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "405" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax\",\"name\":\"testSpoolExisting2-ud47ax\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting2-ud47ax.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  }
+}

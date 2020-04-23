@@ -1,0 +1,81 @@
+{
+  "New-AzSpool+[NoContext]+CreateExpanded+$PUT+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview",
+      "Content": "{\r\n  \"location\": \"westus2\",\r\n  \"tags\": {\r\n    \"test\": \"powershell\"\r\n  }\r\n}",
+      "Headers": {
+        "x-ms-unique-id": [ "9" ],
+        "x-ms-client-request-id": [ "106a7646-5ae3-4954-83bf-e54a75e5d16c" ],
+        "CommandName": [ "New-AzSpool" ],
+        "FullCommandName": [ "New-AzSpool_CreateExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "74" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1197" ],
+        "x-ms-request-id": [ "a0e8643c-578a-407b-bc91-08502cfde31c" ],
+        "x-ms-correlation-request-id": [ "cf9a9277-4679-493d-812d-05f85f78ea9a" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190000Z:cf9a9277-4679-493d-812d-05f85f78ea9a" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:00 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "421" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3\",\"name\":\"testSpoolCreated-91xmph3\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{\"test\":\"powershell\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolcreated-91xmph3.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "New-AzSpool+[NoContext]+CreateExpanded+$DELETE+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview+2": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolCreated-91xmph3?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "10" ],
+        "x-ms-client-request-id": [ "ad79a9bf-627b-427b-84a5-91a99f5efc20" ],
+        "CommandName": [ "Remove-AzSpool" ],
+        "FullCommandName": [ "Remove-AzSpool_Delete" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-request-id": [ "00000000-0000-0000-0000-000000000000" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [ "14999" ],
+        "x-ms-correlation-request-id": [ "e98ac96f-0d46-4f5d-a699-d04ac9b42188" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190001Z:e98ac96f-0d46-4f5d-a699-d04ac9b42188" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:01 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ],
+        "Content-Length": [ "0" ]
+      },
+      "Content": null
+    }
+  }
+}

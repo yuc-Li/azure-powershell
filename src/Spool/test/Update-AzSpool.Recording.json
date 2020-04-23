@@ -1,0 +1,240 @@
+{
+  "Update-AzSpool+[NoContext]+UpdateExpanded+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "26" ],
+        "x-ms-client-request-id": [ "f93fcaf4-348c-4f88-a901-44a1a07c6c09" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11994" ],
+        "x-ms-request-id": [ "25872d2d-bba9-4dd7-970f-6475a45ce136" ],
+        "x-ms-correlation-request-id": [ "cdb17a4a-36bb-4b27-8f2f-88632fb1298b" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190013Z:cdb17a4a-36bb-4b27-8f2f-88632fb1298b" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:12 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "405" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"name\":\"testSpoolExisting1-8lje6o\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting1-8lje6o.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Update-AzSpool+[NoContext]+UpdateExpanded+$PATCH+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview+2": {
+    "Request": {
+      "Method": "PATCH",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview",
+      "Content": "{\r\n  \"tags\": {\r\n    \"powershell\": \"UpdateExpanded\"\r\n  }\r\n}",
+      "Headers": {
+        "x-ms-unique-id": [ "27" ],
+        "x-ms-client-request-id": [ "588dea43-bc98-42b1-8c97-e5f8e87b8d6f" ],
+        "CommandName": [ "Update-AzSpool" ],
+        "FullCommandName": [ "Update-AzSpool_UpdateExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "58" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1194" ],
+        "x-ms-request-id": [ "b41ccb4b-3020-4db0-a3b7-94cf5a4c6d08" ],
+        "x-ms-correlation-request-id": [ "7a8b1508-e78c-4a99-b095-f04165f535d3" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190013Z:7a8b1508-e78c-4a99-b095-f04165f535d3" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:13 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "434" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"name\":\"testSpoolExisting1-8lje6o\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{\"powershell\":\"UpdateExpanded\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting1-8lje6o.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Update-AzSpool+[NoContext]+UpdateExpanded+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview+3": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "28" ],
+        "x-ms-client-request-id": [ "0834476d-a716-4d9e-a676-34d12fe6f2a8" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11993" ],
+        "x-ms-request-id": [ "ea99c497-fa21-44cf-bc77-b737b5096bb4" ],
+        "x-ms-correlation-request-id": [ "7a5366a4-975d-4842-bf53-f35d4cb4adca" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190013Z:7a5366a4-975d-4842-bf53-f35d4cb4adca" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:13 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "434" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting1-8lje6o\",\"name\":\"testSpoolExisting1-8lje6o\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{\"powershell\":\"UpdateExpanded\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting1-8lje6o.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Update-AzSpool+[NoContext]+UpdateViaIdentityExpanded+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "29" ],
+        "x-ms-client-request-id": [ "2052868c-7324-40d7-b0ed-3d9892da4a37" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11992" ],
+        "x-ms-request-id": [ "61f774b2-8373-44b0-82db-da8c71efd230" ],
+        "x-ms-correlation-request-id": [ "56a4d08c-b8c9-494c-b6d9-248d04914558" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190013Z:56a4d08c-b8c9-494c-b6d9-248d04914558" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:13 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "405" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax\",\"name\":\"testSpoolExisting2-ud47ax\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting2-ud47ax.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Update-AzSpool+[NoContext]+UpdateViaIdentityExpanded+$PATCH+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview+2": {
+    "Request": {
+      "Method": "PATCH",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview",
+      "Content": "{\r\n  \"tags\": {\r\n    \"powershell\": \"UpdateViaIdentityExpanded\"\r\n  }\r\n}",
+      "Headers": {
+        "x-ms-unique-id": [ "30" ],
+        "x-ms-client-request-id": [ "d2ede695-a1de-4e79-b1ef-67c6a28057c6" ],
+        "CommandName": [ "Update-AzSpool" ],
+        "FullCommandName": [ "Update-AzSpool_UpdateViaIdentityExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "69" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1193" ],
+        "x-ms-request-id": [ "b6975672-18d0-41e4-9db1-1f8cb37b95ab" ],
+        "x-ms-correlation-request-id": [ "53a01ec2-cc42-4b94-b08a-e8f74f31670c" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190014Z:53a01ec2-cc42-4b94-b08a-e8f74f31670c" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:14 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "445" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax\",\"name\":\"testSpoolExisting2-ud47ax\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{\"powershell\":\"UpdateViaIdentityExpanded\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting2-ud47ax.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  },
+  "Update-AzSpool+[NoContext]+UpdateViaIdentityExpanded+$GET+https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview+3": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax?api-version=2019-10-10-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "31" ],
+        "x-ms-client-request-id": [ "c2177051-d772-40d9-b914-e9efc9dd50bb" ],
+        "CommandName": [ "Get-AzSpool" ],
+        "FullCommandName": [ "Get-AzSpool_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowerShell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11991" ],
+        "x-ms-request-id": [ "fd42a561-cd68-49a7-9ff9-7bda60d0c43c" ],
+        "x-ms-correlation-request-id": [ "457222d0-0a26-4be6-808f-da1a1d45f80c" ],
+        "Server": [ "Kestrel" ],
+        "x-ms-routing-request-id": [ "WESTUS2:20200415T190014Z:457222d0-0a26-4be6-808f-da1a1d45f80c" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Wed, 15 Apr 2020 19:00:14 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "445" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"/subscriptions/d80851b9-692f-4204-a0c0-df765df1ebd0/resourceGroups/rg-spool-powershell-7keuqp/providers/Microsoft.SpoolService/spools/testSpoolExisting2-ud47ax\",\"name\":\"testSpoolExisting2-ud47ax\",\"type\":\"Microsoft.SpoolService/spools\",\"location\":\"westus2\",\"tags\":{\"powershell\":\"UpdateViaIdentityExpanded\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"hostName\":\"testspoolexisting2-ud47ax.westus2.spool.azure.net\",\"optionalFeatures\":[]}}"
+    }
+  }
+}
