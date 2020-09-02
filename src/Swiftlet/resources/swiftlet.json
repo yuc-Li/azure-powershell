@@ -1,0 +1,972 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "SwiftletManagementClient",
+    "description": "The Swiftlet Management Client",
+    "version": "2020-03-01-preview"
+  },
+  "host": "management.azure.com",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "security": [
+    {
+      "azure_auth": [
+        "user_impersonation"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "azure_auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "scopes": {
+        "user_impersonation": "impersonate your user account"
+      },
+      "description": "Azure Active Directory OAuth2 Flow"
+    }
+  },
+  "paths": {
+    "/providers/Microsoft.Swiftlet/operations": {
+      "get": {
+        "tags": [
+          "SwiftletOperations"
+        ],
+        "operationId": "Operations_List",
+        "description": "Gets a list of Swiftlet operations.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/AvailableOperations"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        },
+        "x-ms-examples": {
+          "List available operations": {
+            "$ref": "./examples/ListAvailableOperations.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Swiftlet/virtualMachines/{vmName}/start": {
+      "post": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "Start a specified virtual machine.",
+        "operationId": "VirtualMachines_Start",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "vmName",
+            "description": "The name of the virtual machine.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "202": {
+            "description": "Accepted"
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Start a virtual machine.": {
+            "$ref": "./examples/StartVirtualMachine.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Swiftlet/virtualMachines/{vmName}/stop": {
+      "post": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "Stop a specified virtual machine.",
+        "operationId": "VirtualMachines_Stop",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "vmName",
+            "description": "The name of the virtual machine.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "202": {
+            "description": "Accepted"
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Stop a virtual machine.": {
+            "$ref": "./examples/StopVirtualMachine.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/providers/Microsoft.Swiftlet/locations/{location}/swiftletImages": {
+      "get": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "List all Swiftlet images available for the specified subscription and Azure location.",
+        "operationId": "VirtualMachines_ListImages",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The name of a supported Azure region."
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SwiftletImageListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        },
+        "x-ms-examples": {
+          "List available Swiftlet images": {
+            "$ref": "./examples/ListSwiftletImages.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/providers/Microsoft.Swiftlet/locations/{location}/swiftletBundles": {
+      "get": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "List all Swiftlet bundles available for the specified subscription and Azure location.",
+        "operationId": "VirtualMachines_ListBundles",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The name of a supported Azure region."
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SwiftletBundleListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        },
+        "x-ms-examples": {
+          "List available Swiftlet bundles": {
+            "$ref": "./examples/ListSwiftletBundles.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Swiftlet/virtualMachines/{vmName}": {
+      "put": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "Create or update a virtual machine.",
+        "operationId": "VirtualMachines_CreateOrUpdate",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "vmName",
+            "description": "The name of the virtual machine.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "in": "body",
+            "name": "parameters",
+            "description": "Parameters supplied to the operation.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VirtualMachine"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachine"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachine"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Create a virtual machine with ssh authentication.": {
+            "$ref": "./examples/CreateAVirtualMachineWithSshAuthentication.json"
+          },
+          "Create a virtual machine with password authentication.": {
+            "$ref": "./examples/CreateAVirtualMachineWithPasswordAuthentication.json"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "Update a virtual machine.",
+        "operationId": "VirtualMachines_Update",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "vmName",
+            "description": "The name of the virtual machine.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "in": "body",
+            "name": "parameters",
+            "description": "Parameters supplied to the operation.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VirtualMachineUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachine"
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachine"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Update tags of a virtual machine.": {
+            "$ref": "./examples/UpdateVirtualMachineTagsAndPorts.json"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "Delete a virtual machine.",
+        "operationId": "VirtualMachines_Delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "vmName",
+            "description": "The name of the virtual machine.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "202": {
+            "description": "Accepted"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Delete a virtual machine.": {
+            "$ref": "./examples/DeleteVirtualMachine.json"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "Get information about the virtual machine.",
+        "operationId": "VirtualMachines_Get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "vmName",
+            "description": "The name of the virtual machine.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachine"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Get a virtual machine.": {
+            "$ref": "./examples/GetVirtualMachine.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Swiftlet/virtualMachines": {
+      "get": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "List all of the virtual machines in the specified resource group. Use the nextLink property in the response to get the next page of virtual machines.",
+        "operationId": "VirtualMachines_ListByResourceGroup",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "resourceGroupName",
+            "description": "The name of the resource group within the user’s subscription ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachineListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        },
+        "x-ms-examples": {
+          "List all virtual machines in a resource group.": {
+            "$ref": "./examples/ListVirtualMachinesByResourceGroup.json"
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/providers/Microsoft.Swiftlet/virtualMachines": {
+      "get": {
+        "tags": [
+          "VirtualMachines"
+        ],
+        "description": "List all of the virtual machines in the specified subscription. Use the nextLink property in the response to get the next page of virtual machines.",
+        "operationId": "VirtualMachines_ListBySubscription",
+        "parameters": [
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VirtualMachineListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        },
+        "x-ms-examples": {
+          "List all virtual machines in a subscription.": {
+            "$ref": "./examples/ListVirtualMachinesBySubscription.json"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CloudError": {
+      "x-ms-external": true,
+      "properties": {
+        "error": {
+          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ErrorResponse",
+          "description": "Wrapper for the common error response."
+        }
+      },
+      "description": "An error response for a resource management request."
+    },
+    "AvailableOperations": {
+      "description": "Available operations of the Microsoft.Swiftlet resource provider",
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Collection of available operation details",
+          "uniqueItems": false,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OperationDetail"
+          }
+        },
+        "nextLink": {
+          "description": "URL client should use to fetch the next page (per server side paging).\r\nIt's null for now, added for future use.",
+          "type": "string"
+        }
+      }
+    },
+    "OperationDetail": {
+      "description": "Operation detail payload",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the operation",
+          "type": "string"
+        },
+        "isDataAction": {
+          "description": "Indicates whether the operation is a data action",
+          "type": "boolean"
+        },
+        "display": {
+          "$ref": "#/definitions/OperationDisplay",
+          "description": "Display of the operation"
+        },
+        "origin": {
+          "description": "Origin of the operation",
+          "type": "string"
+        }
+      }
+    },
+    "OperationDisplay": {
+      "description": "Operation display payload",
+      "type": "object",
+      "properties": {
+        "provider": {
+          "description": "Resource provider of the operation",
+          "type": "string"
+        },
+        "resource": {
+          "description": "Resource of the operation",
+          "type": "string"
+        },
+        "operation": {
+          "description": "Localized friendly name for the operation",
+          "type": "string"
+        },
+        "description": {
+          "description": "Localized friendly description for the operation",
+          "type": "string"
+        }
+      }
+    },
+    "SwiftletImage": {
+      "description": "Specifies information about the Swiftlet image to use.",
+      "type": "object",
+      "properties": {
+        "swiftletImageId": {
+          "readOnly": true,
+          "description": "The image ID.",
+          "type": "string"
+        },
+        "appName": {
+          "readOnly": true,
+          "description": "The app name if this is an \"OS + Apps\" image. Otherwise this will not be set.",
+          "type": "string"
+        },
+        "appVersion": {
+          "readOnly": true,
+          "description": "The app version if this is an \"OS + Apps\" image. Otherwise this will not be set.",
+          "type": "string"
+        },
+        "platform": {
+          "readOnly": true,
+          "description": "The OS platform. Allowed values will be \"windows\" or \"linux\".",
+          "type": "string"
+        },
+        "osName": {
+          "readOnly": true,
+          "description": "The OS name.",
+          "type": "string"
+        },
+        "osVersion": {
+          "readOnly": true,
+          "description": "The OS version.",
+          "type": "string"
+        },
+        "displayPublisher": {
+          "readOnly": true,
+          "description": "The publisher name.",
+          "type": "string"
+        },
+        "summary": {
+          "readOnly": true,
+          "description": "The image summary.",
+          "type": "string"
+        },
+        "legalTermsUri": {
+          "readOnly": true,
+          "description": "The legal terms URI.",
+          "type": "string"
+        }
+      }
+    },
+    "SwiftletImageListResult": {
+      "description": "The list Swiftlet images response.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "The list of Swiftlet images.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwiftletImage"
+          }
+        },
+        "nextLink": {
+          "description": "The URI to fetch the next page of resources. Call ListNext() with this URI to fetch the next page of resources.",
+          "type": "string"
+        }
+      }
+    },
+    "SwiftletBundle": {
+      "description": "Specifies information about the Swiftlet bundle to use.",
+      "type": "object",
+      "properties": {
+        "swiftletBundleSku": {
+          "readOnly": true,
+          "description": "The ARM SKU name of the bundle.",
+          "type": "string"
+        },
+        "supportedImagePlatform": {
+          "readOnly": true,
+          "description": "The OS image platforms that can be selected with this bundle. Allowed values will be \"windows\" or \"linux\".",
+          "type": "string"
+        },
+        "memorySizeGB": {
+          "readOnly": true,
+          "description": "The amount of RAM in gigabytes (GB).",
+          "type": "number",
+          "format": "double"
+        },
+        "vcpus": {
+          "readOnly": true,
+          "description": "The number of CPUs.",
+          "type": "integer",
+          "format": "int32"
+        },
+        "osDiskSizeGB": {
+          "readOnly": true,
+          "description": "The size of the OS disk in gigabytes (GB).",
+          "type": "integer",
+          "format": "int32"
+        },
+        "osDiskStorageAccountType": {
+          "readOnly": true,
+          "description": "The storage account type for the OS disk.",
+          "type": "string"
+        },
+        "transferTB": {
+          "readOnly": true,
+          "description": "The amount of transfer bandwidth in terabytes (TB).",
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "SwiftletBundleListResult": {
+      "description": "The list Swiftlet bundles response.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "The list of Swiftlet bundles.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SwiftletBundle"
+          }
+        },
+        "nextLink": {
+          "description": "The URI to fetch the next page of resources. Call ListNext() with this URI to fetch the next page of resources.",
+          "type": "string"
+        }
+      }
+    },
+    "Port": {
+      "properties": {
+        "portRange": {
+          "type": "string",
+          "description": "The port(s) that will be open to traffic. This will be a string that can indicate a single port, a range (i.e. 50-60), or \"*\" to indicate all ports."
+        },
+        "protocol": {
+          "type": "string",
+          "description": "The type of traffic to allow on this port. Allowed values are \"TCP\", \"UDP\", \"ICMP\", and \"*\" (indicates all supported protocol types allowed). If not specified, it will be default to \"*\"."
+        }
+      },
+      "description": "The port(s) to open."
+    },
+    "VirtualMachineProperties": {
+      "description": "Describes the properties of a virtual machine.",
+      "required": [
+        "swiftletBundleSku",
+        "swiftletImageId"
+      ],
+      "type": "object",
+      "properties": {
+        "swiftletBundleSku": {
+          "description": "Specifies the Swiftlet bundle of this virtual machine (which specifies the selected tier of memory, processing, and storage).",
+          "type": "string"
+        },
+        "swiftletBundle": {
+          "description": "The Swiftlet bundle.",
+          "$ref": "#/definitions/SwiftletBundle",
+          "readOnly": true
+        },
+        "swiftletImageId": {
+          "description": "The image ID to use. The image \"platform\" must match the \"supportedImagePlatform\" of the specified swiftletBundleSku.",
+          "type": "string"
+        },
+        "swiftletImage": {
+          "description": "The Swiftlet image.",
+          "$ref": "#/definitions/SwiftletImage",
+          "readOnly": true
+        },
+        "username": {
+          "description": "The username for connecting the the virtual machine.",
+          "type": "string"
+        },
+        "sshPublicKey": {
+          "description": "The SSH public key used to connect to this virtual machine. Only supported on Linux images. If specified on a Windows image, an error will be returned.",
+          "type": "string"
+        },
+        "password": {
+          "description": "The password for connecting to this Swiftlet. If the image platform type is \"linux\", this is optional if sshPublicKey is set. If the image platform type is \"windows\", this is required.",
+          "type": "string",
+          "x-ms-mutability": ["create"]
+        },
+        "ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Port"
+          },
+          "description": "The ports on which inbound traffic will be allowed."
+        },
+        "startupScript": {
+          "description": "An inline script that will run upon startup of the virtual machine.",
+          "type": "string"
+        },
+        "publicIPAddress": {
+          "description": "The public IP address of the virtual machine.",
+          "type": "string",
+          "readOnly": true
+        },
+        "publicIPv6Address": {
+          "description": "The public IPv6 address of the virtual machine.",
+          "type": "string",
+          "readOnly": true
+        },
+        "privateIPAddress": {
+          "description": "The private IP address of the virtual machine.",
+          "type": "string",
+          "readOnly": true
+        },
+        "provisioningState": {
+          "description": "The status of a user-initiated, control-plane operation on the virtual machine.",
+          "type": "string",
+          "readOnly": true
+        },
+        "powerState": {
+          "description": "The last known state of the virtual machine.",
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "VirtualMachine": {
+      "description": "Describes a virtual machine.",
+      "required": [
+        "properties"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/TrackedResource"
+        }
+      ],
+      "properties": {
+        "properties": {
+          "x-ms-client-flatten": true,
+          "$ref": "#/definitions/VirtualMachineProperties",
+          "description": "The virtual machine properties."
+        }
+      }
+    },
+    "VirtualMachineUpdate": {
+      "description": "The request body for the Update Virtual Machine operation.",
+      "properties": {
+        "properties": {
+          "x-ms-client-flatten": true,
+          "$ref": "#/definitions/VirtualMachineUpdateProperties",
+          "description": "The properties to update."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/UpdateResource"
+        }
+      ]
+    },
+    "UpdateResource": {
+      "description": "The Update Resource model definition.",
+      "properties": {
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Resource tags"
+        }
+      }
+    },
+    "VirtualMachineUpdateProperties": {
+      "description": "The Virtual Machine update properties.",
+      "type": "object",
+      "properties": {
+        "ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Port"
+          },
+          "description": "Specifies the list of ports to be opened."
+        }
+      }
+    },
+    "VirtualMachineListResult": {
+      "description": "The list virtual machine response.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "The list of virtual machines.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VirtualMachine"
+          }
+        },
+        "nextLink": {
+          "description": "The URI to fetch the next page of resources. Call ListNext() with this URI to fetch the next page of resources.",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "parameters": {
+    "SubscriptionIdParameter": {
+      "in": "path",
+      "name": "subscriptionId",
+      "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
+      "required": true,
+      "type": "string"
+    },
+    "ApiVersionParameter": {
+      "in": "query",
+      "name": "api-version",
+      "description": "Client Api Version.",
+      "required": true,
+      "type": "string"
+    }
+  }
+}

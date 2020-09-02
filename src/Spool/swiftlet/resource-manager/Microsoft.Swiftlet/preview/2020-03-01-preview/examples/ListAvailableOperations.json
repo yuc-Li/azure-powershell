@@ -1,0 +1,46 @@
+{
+    "parameters": {
+        "api-version": "2020-03-01-preview"
+      },
+      "responses": {
+        "200": {
+          "body": {   
+            "value": [
+                {
+                    "name": "Microsoft.Swiftlet/virtualMachines/delete",
+                    "display": {
+                      "provider": "Microsoft Swiftlet",
+                      "resource": "Virtual Machines",
+                      "operation": "Delete Virtual Machine",
+                      "description": "Deletes a Virtual Machine"
+                    },
+                    "origin": "user,system",
+                    "isDataAction": false
+                },
+                {
+                    "name": "Microsoft.Swiftlet/virtualMachines/write",
+                    "display": {
+                        "provider": "Microsoft Swiftlet",
+                        "resource": "Virtual Machines",
+                        "operation": "Create or Update Virtual Machine",
+                        "description": "Creates a new Virtual Machine or updates an existing Virtual Machine"
+                    },
+                    "origin": "user,system",
+                    "isDataAction": false
+                },
+                {
+                    "name": "Microsoft.Swiftlet/virtualMachines/read",
+                    "display": {
+                        "provider": "Microsoft Swiftlet",
+                        "resource": "Virtual Machines",
+                        "operation": "Get Virtual Machine",
+                        "description": "Gets the properties of a Virtual Machine"
+                    },
+                    "origin": "user,system",
+                    "isDataAction": false
+                }
+            ]
+          }
+        }
+      }
+}

@@ -1,0 +1,34 @@
+{
+    "parameters": {
+      "subscriptionId": "{subscription-id}",
+      "location": "westus",
+      "api-version": "2020-03-01-preview"
+    },
+    "responses": {
+      "200": {
+        "body": {   
+          "value": [
+            {
+                "swiftletBundleSku": "Linux_1",
+                "supportedImagePlatform": "Linux",
+                "memorySizeGB": 0.5,
+                "vcpus": 1,
+                "osDiskSizeGB": 32,
+                "osDiskStorageAccountType": "StandardSSD_LRS",
+                "transferTB": 1
+            },
+            {
+                "swiftletBundleSku": "Windows_1",
+                "supportedImagePlatform": "Windows",
+                "memorySizeGB": 1.0,
+                "vcpus": 1,
+                "osDiskSizeGB": 32,
+                "osDiskStorageAccountType": "StandardSSD_LRS",
+                "transferTB": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+  

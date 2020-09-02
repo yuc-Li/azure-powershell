@@ -1,0 +1,34 @@
+{
+    "parameters": {
+      "subscriptionId": "{subscription-id}",
+      "location": "westus",
+      "api-version": "2020-03-01-preview"
+    },
+    "responses": {
+      "200": {
+        "body": {   
+          "value": [
+            {
+                "swiftletImageId": "windows-2016-datacenter",
+                "platform": "Windows",
+                "osName": "Windows Server",
+                "osVersion": "2016",
+                "displayPublisher": "Microsoft",
+                "summary": "A comprehensive server operating system designed to run the applications and infrastructure that power your business.",
+                "legalTermsUri": "https://106c4.wpc.azureedge.net/80106C4/Gallery-Prod/cdn/2015-02-24/prod20161101-microsoft-windowsazure-gallery/Microsoft.smalldiskWindowsServer2008R2SP1.1.0.124/Content/LegalTerms0.DEFAULT.txt"
+            },
+            {
+                "swiftletImageId": "ubuntu-18.04-lts",
+                "platform": "Linux",
+                "osName": "Ubuntu",
+                "osVersion": "18.04 LTS",
+                "displayPublisher": "Canonical",
+                "summary": "Ubuntu Server delivers high value scale-out performance.",
+                "legalTermsUri": "https://106c4.wpc.azureedge.net/80106C4/Gallery-Prod/cdn/2015-02-24/prod20161101-microsoft-windowsazure-gallery/Canonical.UbuntuServer1804LTS.1.0.30/Content/LegalTerms0.DEFAULT.txt"
+            }
+          ]
+        }
+      }
+    }
+  }
+  
