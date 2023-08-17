@@ -30,9 +30,15 @@ Deletes a cluster.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Remove Cluster
 ```powershell
-{{ Add code here }}
+$clusterResourceGroupName = "Group"
+$clusterpoolName = "your-clusterpool"
+$clusterName = "yourcluster"
+Remove-AzHdInsightOnAksCluster `
+    -Name $clusterName `
+    -PoolName $clusterpoolName `
+    -ResourceGroupName $clusterResourceGroupName `
 ```
 
 ```output

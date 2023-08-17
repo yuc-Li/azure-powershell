@@ -15,10 +15,10 @@ Creates or updates a cluster pool.
 ### UpdateExpanded (Default)
 ```
 Set-AzHdInsightOnAksClusterPool -Name <String> -ResourceGroupName <String> -Location <String>
- [-SubscriptionId <String>] [-ClusterPoolProfileClusterPoolVersion <String>] [-ComputeProfileVMSize <String>]
- [-LogAnalyticProfileEnabled] [-LogAnalyticProfileWorkspaceId <String>] [-ManagedResourceGroupName <String>]
- [-NetworkProfileSubnetId <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-SubscriptionId <String>] [-ClusterPoolVersion <String>] [-EnableAzureMonitor]
+ [-LogAnalyticWorkspaceResourceId <String>] [-ManagedResourceGroupName <String>] [-SubnetId <String>]
+ [-Tag <Hashtable>] [-VmSize <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Update
@@ -88,23 +88,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ClusterPoolProfileClusterPoolVersion
+### -ClusterPoolVersion
 Cluster pool version is a 2-part version.
-
-```yaml
-Type: System.String
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ComputeProfileVMSize
-The virtual machine SKU.
 
 ```yaml
 Type: System.String
@@ -134,6 +119,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAzureMonitor
+True if log analytics is enabled for cluster pool, otherwise false.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
 The geo-location where the resource lives
 
@@ -149,22 +149,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LogAnalyticProfileEnabled
-True if log analytics is enabled for cluster pool, otherwise false.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogAnalyticProfileWorkspaceId
+### -LogAnalyticWorkspaceResourceId
 Log analytics workspace to associate with the OMS agent.
 
 ```yaml
@@ -211,21 +196,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NetworkProfileSubnetId
-Cluster pool subnet resource id.
-
-```yaml
-Type: System.String
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NoWait
 Run the command asynchronously
 
@@ -257,6 +227,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SubnetId
+Cluster pool subnet resource id.
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 The ID of the target subscription.
 The value must be an UUID.
@@ -278,6 +263,21 @@ Resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
+Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VmSize
+The virtual machine SKU.
+
+```yaml
+Type: System.String
 Parameter Sets: UpdateExpanded
 Aliases:
 

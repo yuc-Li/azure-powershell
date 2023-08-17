@@ -22,16 +22,25 @@ Returns a list of available cluster versions.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: List available cluster versions per location
 ```powershell
-{{ Add code here }}
+$location = "West US 2"
+Get-AzHdInsightOnAksAvailableClusterVersion -Location $location
 ```
 
 ```output
-{{ Add output here }}
+ClusterPoolVersion           : 1.0
+ClusterVersionValue          : 1.0.6
+ClusterType                  : Trino
+Component                    : {Trino, Hive metastore}
+Id                           : /subscriptions/10e32bab-26da-4cc4-a441-52b318f824e6/providers/Microsoft.HDInsight/locations/West US
+                               2/availableclusterversions/trino_0.410.0-1.0.6
+IsPreview                    : False
+Name                         : trino_0.410.0-1.0.6
+OssVersion                   : 0.410.0
 ```
 
-{{ Add description here }}
+List available cluster versions per location
 
 ### Example 2: {{ Add title here }}
 ```powershell

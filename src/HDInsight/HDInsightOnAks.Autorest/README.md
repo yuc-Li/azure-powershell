@@ -49,23 +49,21 @@ In this directory, run AutoRest:
 ### General settings
 > Values
 ``` yaml
+branch: f09aacf4c6b63be416212cb182f6b31e8bc6d545
 require:
   - $(this-folder)/../../readme.azure.noprofile.md
-input-file:
-  - D:\source\azure-rest-api-specs\specification\hdinsight\resource-manager\Microsoft.HDInsight\HDInsightOnAks\preview\2023-06-01-preview\hdinsight.json
+  - $(repo)/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsightOnAks/readme.md
+
+# input-file:
+#  - D:\source\azure-rest-api-specs\specification\hdinsight\resource-manager\Microsoft.HDInsight\HDInsightOnAks\preview\2023-06-01-preview\hdinsight.json
 inlining-threshold: 100
 ```
 
 > Names
 ``` yaml
-module-version: 0.2.0
+module-version: 0.1.0
 title: HdInsightOnAks
 subject-prefix: "$(service-name)"
-directive:
-  - from: D:\source\azure-rest-api-specs\specification\hdinsight\resource-manager\Microsoft.HDInsight\HDInsightOnAks\preview\2023-06-01-preview\hdinsight.json
-    where: $..responses.202
-    transform: delete $.headers
-
 ```
 
 > Exclude some properties in table view
@@ -79,8 +77,15 @@ default-exclude-tableview-properties: true
 identity-correction-for-post: true
 directive:
   - from: swagger-document
-    where: $..responses.202
+    where: $.paths..responses.202
     transform: delete $.headers
+  - where:
+      parameter-name: SubscriptionId
+    set:
+      default:
+        name: SubscriptionId Default
+        description: Gets the SubscriptionId from the current context.
+        script: '(Get-AzContext).Subscription.Id'    
   - where:
       model-name: ClusterPoolListResult
     set:
@@ -106,17 +111,54 @@ directive:
     set:
       suppress-format: true
   - where:
-      verb: New
+      model-name: ClusterPoolVersion
+    set:
+      suppress-format: true
+  - where:
+      model-name: ClusterPoolVersion
+      property-name: PropertiesClusterPoolVersion
+    set:
+      property-name: ClusterPoolVersionValue
+  - where:
+      model-name: ClusterVersion
+    set:
+      suppress-format: true
+  - where:
+      model-name: ClusterVersion
+      property-name: PropertiesClusterVersion
+    set:
+      property-name: ClusterVersionValue      
+# the below is cmdlet part      
+  - where:
+      verb: New|Set
       subject: [Cluster|ClusterPool]
       parameter-name: LogAnalyticProfileEnabled
     set:
       parameter-name: EnableAzureMonitor
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster|ClusterPool]
       parameter-name: LogAnalyticProfileWorkspaceId
     set:
       parameter-name: LogAnalyticWorkspaceResourceId
+  - where:
+      verb: New|Set
+      subject: [Cluster|ClusterPool]
+      parameter-name: NetworkProfileSubnetId
+    set:
+      parameter-name: SubnetId     
+  - where:
+      verb: New|Set
+      subject: [ClusterPool]
+      parameter-name: ClusterPoolProfileClusterPoolVersion
+    set:
+      parameter-name: ClusterPoolVersion
+  - where:
+      verb: New|Set
+      subject: [ClusterPool]
+      parameter-name: ComputeProfileVMSize
+    set:
+      parameter-name: VmSize
   - where:
       verb: New
       subject: [Cluster]
@@ -141,5 +183,6 @@ directive:
       parameter-name: (^ClusterProfile)(.*)
     set:
       parameter-name: $2
+# The below customize the output model   
 
 ```

@@ -15,10 +15,10 @@ Creates or updates a cluster pool.
 ### CreateExpanded (Default)
 ```
 New-AzHdInsightOnAksClusterPool -Name <String> -ResourceGroupName <String> -Location <String>
- [-SubscriptionId <String>] [-ClusterPoolProfileClusterPoolVersion <String>] [-ComputeProfileVMSize <String>]
- [-EnableAzureMonitor] [-LogAnalyticWorkspaceResourceId <String>] [-ManagedResourceGroupName <String>]
- [-NetworkProfileSubnetId <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-SubscriptionId <String>] [-ClusterPoolVersion <String>] [-EnableAzureMonitor]
+ [-LogAnalyticWorkspaceResourceId <String>] [-ManagedResourceGroupName <String>] [-SubnetId <String>]
+ [-Tag <Hashtable>] [-VmSize <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Create
@@ -37,10 +37,9 @@ New-AzHdInsightOnAksClusterPool -InputObject <IHdInsightOnAksIdentity> -ClusterP
 ### CreateViaIdentityExpanded
 ```
 New-AzHdInsightOnAksClusterPool -InputObject <IHdInsightOnAksIdentity> -Location <String>
- [-ClusterPoolProfileClusterPoolVersion <String>] [-ComputeProfileVMSize <String>] [-EnableAzureMonitor]
- [-LogAnalyticWorkspaceResourceId <String>] [-ManagedResourceGroupName <String>]
- [-NetworkProfileSubnetId <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-ClusterPoolVersion <String>] [-EnableAzureMonitor] [-LogAnalyticWorkspaceResourceId <String>]
+ [-ManagedResourceGroupName <String>] [-SubnetId <String>] [-Tag <Hashtable>] [-VmSize <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,13 +47,40 @@ Creates or updates a cluster pool.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Create Cluster Pool
 ```powershell
-{{ Add code here }}
+# Cluster pool configuration info
+$location = "West US 2"
+$clusterResourceGroupName = "Group"
+$clusterpoolName = "your-clusterpool"
+$vmSize = "Standard_F4S_V2"
+
+$clusterPoolVersion= (Get-AzHdInsightOnAksAvailableClusterPoolVersion -Location $location)[0].ClusterPoolVersionValue
+
+# Create the cluster pool
+New-AzHdInsightOnAksClusterPool `
+    -Name $clusterpoolName `
+    -ResourceGroupName $clusterResourceGroupName `
+    -ClusterPoolVersion $clusterPoolVersion `
+    -VmSize vmSize `
+    -Location $location
 ```
 
 ```output
-{{ Add output here }}
+AkClusterAgentPoolIdentityProfileMsiClientId   : 00000000-0000-0000-0000-000000000000
+AkClusterAgentPoolIdentityProfileMsiObjectId   : 00000000-0000-0000-0000-000000000000
+AkClusterAgentPoolIdentityProfileMsiResourceId : /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/MC_hdi-00000000-0000-0000-0000-000000000000_your-clusterpool_westu
+                                                 s2/providers/Microsoft.ManagedIdentity/userAssignedIdentities/your-clusterpool-agentpool
+AkClusterProfileAksClusterResourceId           : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hdi-00000000-0000-0000-0000-000000000000/providers/M
+                                                 icrosoft.ContainerService/managedClusters/your-clusterpool
+AkClusterProfileAksVersion                     : 1.26
+AksManagedResourceGroupName                    : MC_hdi-00000000-0000-0000-0000-000000000000_your-clusterpool_westus2
+ComputeProfileCount                            : 3
+ComputeProfileVMSize                           : standard_f4s_v2
+DeploymentId                                   : b671489750ff4112aa8c8fac8d153f7b
+Id                                             : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Group/providers/Microsoft.HDInsight/clus
+                                                 terpools/your-clusterpool
+Location                                       : West US 2
 ```
 
 {{ Add description here }}
@@ -103,23 +129,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ClusterPoolProfileClusterPoolVersion
+### -ClusterPoolVersion
 Cluster pool version is a 2-part version.
-
-```yaml
-Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ComputeProfileVMSize
-The virtual machine SKU.
 
 ```yaml
 Type: System.String
@@ -242,21 +253,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NetworkProfileSubnetId
-Cluster pool subnet resource id.
-
-```yaml
-Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NoWait
 Run the command asynchronously
 
@@ -288,6 +284,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SubnetId
+Cluster pool subnet resource id.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 The ID of the target subscription.
 The value must be an UUID.
@@ -309,6 +320,21 @@ Resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VmSize
+The virtual machine SKU.
+
+```yaml
+Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 

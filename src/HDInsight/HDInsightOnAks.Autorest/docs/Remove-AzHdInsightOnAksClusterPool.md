@@ -29,27 +29,18 @@ Deletes a Cluster Pool.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Remove cluster pool
 ```powershell
-{{ Add code here }}
+$clusterResourceGroupName = "Group"
+$clusterpoolName = "your-clusterpool"
+Remove-AzHdInsightOnAksClusterPool -Name $clusterpoolName -ResourceGroupName $clusterResourceGroupName
 ```
 
 ```output
 {{ Add output here }}
 ```
 
-{{ Add description here }}
-
-### Example 2: {{ Add title here }}
-```powershell
-{{ Add code here }}
-```
-
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
+Remove cluster pool with name.
 
 ## PARAMETERS
 
