@@ -134,7 +134,7 @@ directive:
       subject: [Cluster|ClusterPool]
       parameter-name: LogAnalyticProfileEnabled
     set:
-      parameter-name: EnableAzureMonitor
+      parameter-name: EnableLogAnalytics
   - where:
       verb: New|Set
       subject: [Cluster|ClusterPool]
@@ -183,6 +183,31 @@ directive:
       parameter-name: (^ClusterProfile)(.*)
     set:
       parameter-name: $2
+  - where:
+      verb: New
+      subject: [Cluster]
+      parameter-name: IdentityProfileMsiClientId
+    set:
+      parameter-name: AssignedIdentityClientId
+  - where:
+      verb: New
+      subject: [Cluster]
+      parameter-name: IdentityProfileMsiResourceId
+    set:
+      parameter-name: AssignedIdentityResourceId
+  - where:
+      verb: New
+      subject: [Cluster]
+      parameter-name: IdentityProfileMsiObjectId
+    set:
+      parameter-name: AssignedIdentityObjectId 
+#TrinoProfileCatalogOptionsHive
+  - where:
+      verb: New
+      subject: [Cluster]
+      parameter-name: TrinoProfileCatalogOptionsHive
+    set:
+      parameter-name: TrinoHiveCatalog
 # The below customize the output model   
 
 ```
