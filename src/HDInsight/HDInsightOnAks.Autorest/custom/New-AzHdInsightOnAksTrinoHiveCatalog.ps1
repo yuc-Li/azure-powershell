@@ -24,18 +24,40 @@ NA
 .Link
 #>
 function New-AzHdInsightOnAksTrinoHiveCatalog{
-    [OutputType([System.String])]
+    [OutputType([Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.Api20230601Preview.IHiveCatalogOption])]
     [CmdletBinding(DefaultParameterSetName='Create', PositionalBinding=$false)]
-    param{
+    param(
         [Parameter(ParameterSetName='Create', Mandatory)]
         [System.String]
-        ${CatalogName}
-    }
+        ${CatalogName},
+
+        [Parameter(ParameterSetName='Create', Mandatory)]
+        [System.String]
+        ${MetastoreDbConnectionUrl},
+        
+        [Parameter(ParameterSetName='Create', Mandatory)]
+        [System.String]
+        ${MetastoreDbConnectionUserName},
+
+        [Parameter(ParameterSetName='Create', Mandatory)]
+        [System.String]
+        ${MetastoreDbConnectionPasswordSecret},
+        
+        [Parameter(ParameterSetName='Create')]
+        [System.String]
+        ${MetastoreWarehouseDir}
+    )
     process{
 
         try{
 
-            Write-Line "Test custom ps1 file."
+            $trinoHiveCatalogOption=New-Object Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.Api20230601Preview.HiveCatalogOption -Property `
+                                            @{CatalogName=$CatalogName;
+                                              MetastoreDbConnectionUrl=$MetastoreDbConnectionUrl;
+                                              MetastoreDbConnectionUserName=$MetastoreDbConnectionUserName;
+                                              MetastoreDbConnectionPasswordSecret=$MetastoreDbConnectionPasswordSecret;
+                                              MetastoreWarehouseDir=$MetastoreWarehouseDir}
+            return $trinoHiveCatalogOption
         }
         catch{
             throw

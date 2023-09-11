@@ -137,6 +137,12 @@ directive:
       parameter-name: EnableLogAnalytics
   - where:
       verb: New|Set
+      subject: [Cluster]
+      parameter-name: HdInsightCluster
+    set:
+      parameter-name: HdInsightOnAksCluster
+  - where:
+      verb: New|Set
       subject: [Cluster|ClusterPool]
       parameter-name: LogAnalyticProfileWorkspaceId
     set:
@@ -160,54 +166,153 @@ directive:
     set:
       parameter-name: VmSize
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: ComputeProfileCount
     set:
       parameter-name: ClusterNodeCount
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: ComputeProfileVMSize
     set:
       parameter-name: ClusterNodeSize
   - where:
-      verb: New
+      verb: New|Set
       subject: Cluster
       parameter-name: (^AuthorizationProfile)(.*)
     set:
       parameter-name: Authorization$2
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: (^ClusterProfile)(.*)
     set:
       parameter-name: $2
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: IdentityProfileMsiClientId
     set:
       parameter-name: AssignedIdentityClientId
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: IdentityProfileMsiResourceId
     set:
       parameter-name: AssignedIdentityResourceId
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: IdentityProfileMsiObjectId
     set:
-      parameter-name: AssignedIdentityObjectId 
+      parameter-name: AssignedIdentityObjectId
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: SecretProfileKeyVaultResourceId
+    set:
+      parameter-name: KeyVaultResourceId
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: SecretProfileSecret
+    set:
+      parameter-name: SecretReference
+# Spark profile related
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: SparkProfileDefaultStorageUrl
+    set:
+      parameter-name: SparkStorageUrl
+# Spark metastore spec related      
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: MetastoreSpecDbName
+    set:
+      parameter-name: SparkHiveCatalogDbName
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: MetastoreSpecDbServerHost
+    set:
+      parameter-name: SparkHiveCatalogDbServerName
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: MetastoreSpecDbUserName
+    set:
+      parameter-name: SparkHiveCatalogDbUserName
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: MetastoreSpecDbPasswordSecretName
+    set:
+      parameter-name: SparkHiveCatalogDbPasswordSecretName
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: MetastoreSpecKeyVaultId
+    set:
+      parameter-name: SparkHiveCatalogKeyVaultId
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: MetastoreSpecThriftUrl
+    set:
+      parameter-name: SparkThriftUrl
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: SparkProfileUserPluginsSpecPlugin
+    hide: true
 #TrinoProfileCatalogOptionsHive
   - where:
-      verb: New
+      verb: New|Set
       subject: [Cluster]
       parameter-name: TrinoProfileCatalogOptionsHive
     set:
       parameter-name: TrinoHiveCatalog
+# Trino Telemetry
+      
+# Flink side
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: StorageUri
+    set:
+      parameter-name: FlinkStorageUrl
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: StorageStoragekey
+    hide: true
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: FlinkProfileNumReplica
+    set:
+      parameter-name: FlinkTaskManagerReplicaCount
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: HiveMetastoreDbConnectionPasswordSecret
+    set:
+      parameter-name: FlinkHiveCatalogDbPasswordSecretName
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: HiveMetastoreDbConnectionUrl
+    set:
+      parameter-name: FlinkHiveCatalogDbConnectionUrl
+  - where:
+      verb: New|Set
+      subject: [Cluster]
+      parameter-name: HiveMetastoreDbConnectionUserName
+    set:
+      parameter-name: FlinkHiveCatalogDbUserName
 # The below customize the output model   
 
 ```
