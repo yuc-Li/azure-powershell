@@ -1,0 +1,44 @@
+{
+  "Get-AzHdInsightOnAksAvailableClusterPoolVersion+[NoContext]+Get-AzHdInsightOnAksAvailableClusterPoolVersion+$GET+https://management.azure.com/subscriptions/10e32bab-26da-4cc4-a441-52b318f824e6/providers/Microsoft.HDInsight/locations/west us 2/availableClusterPoolVersions?api-version=2023-06-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/10e32bab-26da-4cc4-a441-52b318f824e6/providers/Microsoft.HDInsight/locations/west%20us%202/availableClusterPoolVersions?api-version=2023-06-01-preview",
+      "Content": null,
+      "Headers": {
+        "x-ms-unique-id": [ "1" ],
+        "x-ms-client-request-id": [ "a62d9538-62eb-4a0b-bc46-b3044ce18b7c" ],
+        "CommandName": [ "Get-AzHdInsightOnAksAvailableClusterPoolVersion" ],
+        "FullCommandName": [ "Get-AzHdInsightOnAksAvailableClusterPoolVersion_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/Az4.0.0-preview" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11996" ],
+        "x-ms-providerhub-traffic": [ "True" ],
+        "mise-correlation-id": [ "ca82347e-a4ac-491e-8d88-8084b5f60b7f" ],
+        "x-ms-request-id": [ "4e712576-7cfb-4854-878f-073fb313c43f" ],
+        "x-ms-correlation-request-id": [ "9b300d63-9744-4587-847a-6a0b78002d76" ],
+        "x-ms-routing-request-id": [ "JAPANEAST:20230911T082902Z:9b300d63-9744-4587-847a-6a0b78002d76" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "X-Cache": [ "CONFIG_NOCACHE" ],
+        "X-MSEdge-Ref": [ "Ref A: 00FC4863414A4302B1826B5787C9F235 Ref B: TYO201100115007 Ref C: 2023-09-11T08:29:01Z" ],
+        "Date": [ "Mon, 11 Sep 2023 08:29:01 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "248" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"id\":\"/subscriptions/10e32bab-26da-4cc4-a441-52b318f824e6/providers/Microsoft.HDInsight/locations/west us 2/availableclusterpoolversions/1.0\",\"name\":\"1.0\",\"properties\":{\"clusterPoolVersion\":\"1.0\",\"aksVersion\":\"1.26\",\"isPreview\":false}}]}"
+    }
+  }
+}
